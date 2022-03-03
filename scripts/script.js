@@ -2,11 +2,13 @@ let bombArea = document.querySelector('.campo');
 const inPut = document.querySelector('#level');
 const btnPlay = document.querySelector('#play');
 const container = document.querySelector('.container')
-
+let finished = false;
+let gameEnd = false;
 
 btnPlay.addEventListener('click', play)
 
 function play() {
+    // if (gameEnd == false) {
     container.classList.remove("medium", "hard");
     bombArea.innerHTML = "";
    
@@ -31,16 +33,12 @@ function play() {
         
     }
     
-
+    console.log(finished);
     generateRandomBomb(max);
     generateBoxNum(max);
     bombSpreader();
     console.log(boxNums);
-
-
-
    
-    
     for(let i = min; i <= max; i++){
         
         if (boxNums[i] == 'BOMB') {
@@ -51,6 +49,10 @@ function play() {
         }
        
     }
+
+    
+
+
 
 
 
@@ -84,13 +86,15 @@ function play() {
         while (i < 16) {
         let changeBomb = parseInt(bombs[i]);
         boxNums[changeBomb] = "BOMB" 
-        
-
         i++;
         }
     }
+  
     
 }
+
+
+
 
 
 
@@ -104,6 +108,13 @@ function clickedBox () {
 
 function clickedBomb () {
     this.classList.add("selected-bomb", "bomb");
+    finished = true;
+    const finishWindow = document.querySelector('.finish');
+    if (finished == true) {
+        finishWindow.classList.add('display-box');
+        gameEnd = true;
+        
+    } 
 }
 
 function divBox(i) {
@@ -115,10 +126,13 @@ function divBox(i) {
 }
 
 function divBomb(i) {
+    
+    
     let box = document.createElement("div");
     box.innerHTML = i;
     box.classList.add("box");
     box.addEventListener("click", clickedBomb);
     bombArea.append(box);
+    
 }
 

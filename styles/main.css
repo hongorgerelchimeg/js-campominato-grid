@@ -144,6 +144,13 @@ header {
 
 }
 
+.neon-red {
+    font-family: 'Vibur', cursive;
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #D90404, 0 0 0.5em #D90404, 0 0 0.1em #D90404, 0 10px 3px #000;
+
+}
+
 .discription {
     font-size: 2.2rem;
     text-align: center;
@@ -190,4 +197,30 @@ header {
       color: inherit;
       text-shadow: inherit;
     }
+  }
+
+
+  /* GAME OVER WINDOW */
+
+  .finish {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 200px;
+        background-color: rgba(0, 0, 0, 0.252);
+        
+        align-items: center;
+        justify-content: center;
+        display: none;
+
+  }
+
+  .display-box {
+        display: flex;
+  }
+
+  .display-non {
+      display: none;
   }
