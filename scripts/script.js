@@ -20,31 +20,16 @@ btnPlay.addEventListener('click', function(){
         max = 49;
         console.log(max);
     }
-    for (let i = min; i <= max; i++) {
-        console.log(i);
-        bombArea.innerHTML += `<div class="box box-${i}">${i}</div>`;
+
+    for(let i = min; i <= max; i++){
+        let box = document.createElement("div");
+        box.innerHTML = i;
+        box.classList.add("box");
+        box.addEventListener("click", function(){
+            box.classList.toggle("selected");
+        });
+        bombArea.append(box);
     }
-
     
-
 })
-
-
-
-// // let box = document.querySelectorAll('.box');
-// // box.onlick = function() {backgroundChange()};
-
-// //     // btnClick.addEventListener('click', function(){
-// //     //     const box = document.querySelector('.box');
-        
-// //     // })
-
-// //     function backgroundChange () {
-// //         document.querySelectorAll('.box').classList.toggle("selected");
-// //     }
-// let box = document.querySelector('.box');
-//     box.onclick = function changeBackground() {
-
-//         box.classList.toggle("selected");
-//  }
 

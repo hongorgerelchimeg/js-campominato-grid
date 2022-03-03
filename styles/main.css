@@ -10,10 +10,12 @@
     box-sizing: border-box;
 }
 body {
-    background-color: var(--background-color);
-    
+    background: #112 url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm218batch4-aum-07_1_1.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=fa54b60dea7ea75803087c8e1417d1ea)  center no-repeat;
+    background-size:cover;
+  
     min-height: 100vh;
-
+    color: #fff;
+    
 }
 
 h1 {
@@ -25,10 +27,11 @@ h1 {
 /* Header */
 
 header {
-    background-color: white;
+    background-color: var(--background-color);
     display: flex;
     justify-content: space-around;
     min-height: 8vh;
+    color: #0D0D0D;
 }
 
 .left-side, .right-side {
@@ -61,13 +64,15 @@ header {
 /* ********** */
 
 /* Main */
-
+.main {
+    position: relative;
+}
 .container {
-    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 502px;
-    margin: 100px auto;
-    
-    
 }
 
 .campo {
@@ -97,12 +102,14 @@ header {
 }
 
 .selected {
+    background-color: #5cbf41;
     box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
             0 0 2rem #5CBF41,
             0 0 0.8rem #5CBF41,
             0 0 2.8rem #5CBF41,
             inset 0 0 1.3rem #5CBF41;
+
 }
 
 .medium {
@@ -110,4 +117,10 @@ header {
 }
 .easy {
     width: calc(50px * 7 + 2px);
+}
+
+  
+.neon {
+color: #fee;
+text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #5CBF41, 0 0 0.5em #5CBF41, 0 0 0.1em #5CBF41, 0 10px 3px #000;
 }
