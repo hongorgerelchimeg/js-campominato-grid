@@ -102,7 +102,7 @@ header {
 }
 
 .selected {
-    background-color: #C729F2;
+    background-color: #c629f2c7;
     box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
             0 0 2rem #C729F2,
@@ -122,5 +122,5 @@ header {
   
 .neon {
 color: #fee;
-text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #5CBF41, 0 0 0.5em #5CBF41, 0 0 0.1em #5CBF41, 0 10px 3px #000;
+text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #13DCF2, 0 0 0.5em #13DCF2, 0 0 0.1em #13DCF2, 0 10px 3px #000;
 }
