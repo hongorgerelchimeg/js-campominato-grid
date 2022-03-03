@@ -3,7 +3,9 @@ const inPut = document.querySelector('#level');
 const btnPlay = document.querySelector('#play');
 const container = document.querySelector('.container')
 
-btnPlay.addEventListener('click', function(){
+btnPlay.addEventListener('click', play)
+
+function play() {
     container.classList.remove("medium", "easy");
     bombArea.innerHTML = "";
     let level = inPut.value;
@@ -30,6 +32,4 @@ btnPlay.addEventListener('click', function(){
         });
         bombArea.append(box);
     }
-    
-})
-
+}
