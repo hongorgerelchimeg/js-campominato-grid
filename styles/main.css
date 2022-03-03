@@ -90,10 +90,10 @@ header {
     border: 1px solid rgb(215, 215, 215);
     box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
-            0 0 2rem #F2811D,
-            0 0 0.8rem #F2811D,
-            0 0 2.8rem #F2811D,
-            inset 0 0 1.3rem #F2811D;
+            0 0 2rem #13DCF2,
+            0 0 0.8rem #13DCF2,
+            0 0 2.8rem #13DCF2,
+            inset 0 0 1.3rem #13DCF2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,13 +102,13 @@ header {
 }
 
 .selected {
-    background-color: #5cbf41;
+    background-color: #C729F2;
     box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
-            0 0 2rem #5CBF41,
-            0 0 0.8rem #5CBF41,
-            0 0 2.8rem #5CBF41,
-            inset 0 0 1.3rem #5CBF41;
+            0 0 2rem #C729F2,
+            0 0 0.8rem #C729F2,
+            0 0 2.8rem #C729F2,
+            inset 0 0 1.3rem #C729F2;
 
 }
 
