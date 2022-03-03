@@ -31,7 +31,7 @@ header {
     display: flex;
     justify-content: space-around;
     min-height: 8vh;
-    color: #0D0D0D;
+    color: #fff;
 }
 
 .left-side, .right-side {
@@ -102,20 +102,37 @@ header {
 }
 
 .selected {
-    background-color: #c629f2c7;
+    background-color: #5cbf41c8;
     box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
-            0 0 2rem #C729F2,
-            0 0 0.8rem #C729F2,
-            0 0 2.8rem #C729F2,
-            inset 0 0 1.3rem #C729F2;
+            0 0 2rem #5CBF41,
+            0 0 0.8rem #5CBF41,
+            0 0 2.8rem #5CBF41,
+            inset 0 0 1.3rem #5CBF41;
+
+}
+
+.bomb {
+    background-image: url(//img/bomb.jpeg) center no-repeat;
+    background-size: contain;
+
+}
+
+.selected-bomb {
+    background-color: #D90479;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #D90479,
+            0 0 0.8rem #D90479,
+            0 0 2.8rem #D90479,
+            inset 0 0 1.3rem #D90479;
 
 }
 
 .medium {
     width: calc(50px * 9 + 2px) ;
 }
-.easy {
+.hard {
     width: calc(50px * 7 + 2px);
 }
 
