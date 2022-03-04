@@ -103,24 +103,39 @@ function randomNum(min, max) {
 }
 
 function clickedBox () {
-    this.classList.add("selected");
+    this.classList.add("selected", "show");
+
 }
 
 function clickedBomb () {
+    
     this.classList.add("selected-bomb", "bomb");
     finished = true;
     const finishWindow = document.querySelector('.finish');
     if (finished == true) {
         finishWindow.classList.add('display-box');
-        gameEnd = true;
+        let boxCell = document.querySelectorAll('.box');
+        console.log(boxCell);
+        
+        for (i=0; i < boxCell.length; i++) {
+            boxCell[i].removeEventListener("click", clickedBomb);
+            boxCell[i].removeEventListener("click", clickedBox);
+            if (boxCell[i].innerHTML == "") {
+            boxCell[i].classList.add("selected-bomb");
+            } else {
+            
+           } 
+        
+        }
         
     } 
 }
 
 function divBox(i) {
     let box = document.createElement("div");
-    box.innerHTML = i;
-    box.classList.add("box");
+    let randomNumMax3 = randomNum(0, 4);
+    box.innerHTML = randomNumMax3;
+    box.classList.add("box", "hidden");
     box.addEventListener("click", clickedBox);
     bombArea.append(box);
 }
@@ -129,8 +144,7 @@ function divBomb(i) {
     
     
     let box = document.createElement("div");
-    box.innerHTML = i;
-    box.classList.add("box");
+    box.classList.add("box", "hidden");
     box.addEventListener("click", clickedBomb);
     bombArea.append(box);
     

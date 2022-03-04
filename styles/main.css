@@ -112,6 +112,14 @@ header {
 
 }
 
+.hidden {
+    color: rgba(255, 255, 255, 0);
+}
+
+.show {
+    color: white;
+}
+
 .bomb {
     background-image: url(//img/bomb.jpeg) center no-repeat;
     background-size: contain;
